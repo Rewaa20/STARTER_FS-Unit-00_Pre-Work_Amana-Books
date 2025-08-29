@@ -189,7 +189,7 @@ const BookGrid: React.FC<BookGridProps> = ({ books, onAddToCart }) => {
           
           {/* Show current page info */}
           {totalFeaturedPages > 1 && (
-            <div className="text-center mt-4 text-sm text-gray-600">
+            <div className="text-center bg-yellow-100 mt-4 text-sm text-gray-700">
               Showing {featuredCarouselIndex * booksPerPage + 1} - {Math.min((featuredCarouselIndex + 1) * booksPerPage, featuredBooks.length)} of {featuredBooks.length} featured books
             </div>
           )}

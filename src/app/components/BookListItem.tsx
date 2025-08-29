@@ -105,7 +105,7 @@ const BookListItem: React.FC<BookListItemProps> = ({ book, onAddToCart }) => {
               <div className="flex items-center mt-2 gap-2">
                 {renderStars(book.rating)}
                 <span className="text-sm text-gray-500">
-                  {book.rating.toFixed(1)} ({book.reviewCount.toLocaleString()} reviews)
+                  {book.rating.toFixed(1)} ({book.reviewCount.toString()} reviews)
                 </span>
               </div>
 
@@ -148,7 +148,7 @@ const BookListItem: React.FC<BookListItemProps> = ({ book, onAddToCart }) => {
               {/* Action Buttons */}
               <div className="flex flex-col gap-2 min-w-[120px]">
                 <Link href={`/book/${book.id}`} className="cursor-pointer">
-                  <button className="w-full px-3 py-2 text-sm border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors duration-200 cursor-pointer">
+                  <button className="w-full px-3 py-2 text-sm  bg-blue-100 text-blue-700 hover:bg-blue-200  rounded-md hover:bg-gray-50 transition-colors duration-200 cursor-pointer">
                     View Details
                   </button>
                 </Link>
@@ -158,12 +158,12 @@ const BookListItem: React.FC<BookListItemProps> = ({ book, onAddToCart }) => {
                   disabled={!book.inStock || isAddingToCart}
                   className={`w-full px-3 py-2 text-sm rounded-md transition-colors duration-200 ${
                     !book.inStock
-                      ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                      ? 'text-red-600 bg-red-50  cursor-not-allowed'
                       : showSuccess
                       ? 'bg-green-600 text-white cursor-pointer'
                       : isAddingToCart
-                      ? 'bg-blue-400 text-white cursor-wait'
-                      : 'bg-blue-600 text-white hover:bg-blue-700 cursor-pointer'
+                      ? 'bg-gray-400 text-white cursor-wait'
+                      : 'bg-yellow-500 text-white hover:bg-yellow-600 cursor-pointer'
                   }`}
                 >
                   {showSuccess ? (

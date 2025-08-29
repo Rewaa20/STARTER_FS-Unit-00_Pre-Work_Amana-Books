@@ -19,7 +19,7 @@ export const books: Book[] = [
     publisher: 'Al-Biruni Academic Press',
     rating: 4.8,
     reviewCount: 23,
-    inStock: true,
+    inStock: false,
     featured: true,
   },
   {
@@ -874,5 +874,25 @@ export const books: Book[] = [
     reviewCount: 16,
     inStock: true,
     featured: true,
-  }
+  },
+  //prework assigment:add new book task
+  {
+    id: '46',
+    title: 'Clean Code',
+    author: 'Robert C. Martin',
+    description: 'The book provides practical guidance, case studies, and heuristics for improving code quality by making it more efficient and less prone to costly errors and organizational issues.',
+    price: 89.99,
+    image: '/images/book1.jpg',
+    isbn: '978-0123456789',
+    genre: ['Computer Since', 'Software'],
+    tags: ['Computer', 'Software', 'Code'],
+    datePublished: '2025-08-27',
+    pages: 654,
+    language: 'English',
+    publisher: 'Al-Biruni Academic Press',
+    rating: 4.8,
+    reviewCount: 23,
+    inStock: true,
+    featured: true,
+  },
 ];

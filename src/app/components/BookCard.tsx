@@ -124,7 +124,7 @@ const BookCard: React.FC<BookCardProps> = ({ book, onAddToCart }) => {
         {/* Action Buttons */}
         <div className="flex gap-2 mt-4">
           <Link href={`/book/${book.id}`} className="flex-1 cursor-pointer">
-            <button className="w-full px-3 py-2 text-sm border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors duration-200 cursor-pointer">
+            <button className="w-full px-3 py-2 text-sm bg-blue-100 text-blue-700 hover:bg-blue-200 rounded-md hover:bg-gray-50 transition-colors duration-200 cursor-pointer">
               View Details
             </button>
           </Link>
@@ -134,12 +134,12 @@ const BookCard: React.FC<BookCardProps> = ({ book, onAddToCart }) => {
             disabled={!book.inStock || isAddingToCart}
             className={`flex-1 px-3 py-2 text-sm rounded-md transition-colors duration-200 ${
               !book.inStock
-                ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                ? 'text-red-600 bg-red-50 px-2 py-1 rounded cursor-not-allowed'
                 : showSuccess
                 ? 'bg-green-600 text-white cursor-pointer'
                 : isAddingToCart
-                ? 'bg-blue-400 text-white cursor-wait'
-                : 'bg-blue-600 text-white hover:bg-blue-700 cursor-pointer'
+                ? 'bg-gray-400 text-white cursor-wait'
+                : 'bg-yellow-500 text-white hover:bg-yellow-600 cursor-pointer'
             }`}
           >
             {showSuccess ? (

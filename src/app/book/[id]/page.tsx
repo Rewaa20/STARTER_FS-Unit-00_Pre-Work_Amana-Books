@@ -165,7 +165,7 @@ export default function BookDetailPage() {
             ))}
           </div>
 
-          <div className="text-3xl font-bold text-blue-600 mb-6">${book.price.toFixed(2)}</div>
+          <div className="text-3xl font-bold text-yellow-600 mb-6">${book.price.toFixed(2)}</div>
 
           <div className="flex items-center space-x-4 mb-6">
             <label htmlFor="quantity" className="font-semibold">Quantity:</label>
@@ -181,12 +181,12 @@ export default function BookDetailPage() {
 
           <button 
             onClick={handleAddToCart}
-            className="w-full bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600 transition-colors duration-300 text-lg font-semibold cursor-pointer"
+            className="w-full bg-yellow-500 text-white py-3 rounded-md hover:bg-yellow-600 transition-colors duration-300 text-lg font-semibold cursor-pointer"
           >
             Add to Cart
           </button>
 
-          <Link href="/" className="text-blue-500 hover:underline mt-6 text-center cursor-pointer">
+          <Link href="/" className="text-yellow-700 hover:underline mt-6 text-center cursor-pointer">
             &larr; Back to Home
           </Link>
         </div>
